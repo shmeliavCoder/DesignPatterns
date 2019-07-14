@@ -34,11 +34,11 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Class 1\Singleton.cs" />
-    <Compile Include="Class 1\Clock.cs" />
+    <Compile Include="Singleton\Singleton.cs" />
+    <Compile Include="Singleton\Clock.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Class 1\" />
+    <Folder Include="Singleton\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
