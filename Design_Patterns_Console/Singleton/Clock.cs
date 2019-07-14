@@ -8,37 +8,35 @@ namespace Design_Patterns_Console.Class1
 {
     public class Clock
     {
-            private static Clock INSTANCE;
-            private static object key = new Object();
+        private static Clock INSTANCE;
+        private static object key = new Object();
 
-            private Clock()
+        private Clock()
+        {
+
+        }
+
+        public static Clock GetInstance()
+        {
+            if (INSTANCE != null)
             {
-
-            }
-
-            public static Clock GetInstance()
-            {
-                if (INSTANCE != null)
-                {
-                    return INSTANCE;
-                }
-
-                lock (key)
-                {
-                    if (INSTANCE == null)
-                    {
-                        INSTANCE = new Clock();
-                    }
-                }
-
                 return INSTANCE;
             }
 
-            public void printTimeToConsole()
+            lock (key)
             {
-                Console.WriteLine(DateTime.Now);
+                if (INSTANCE == null)
+                {
+                    INSTANCE = new Clock();
+                }
             }
 
-        
+            return INSTANCE;
+        }
+
+        public void printTimeToConsole()
+        {
+            Console.WriteLine(DateTime.Now);
+        } 
     }
 }

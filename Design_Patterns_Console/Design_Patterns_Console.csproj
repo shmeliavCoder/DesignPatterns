@@ -36,9 +36,17 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Singleton\Singleton.cs" />
     <Compile Include="Singleton\Clock.cs" />
+    <Compile Include="FactoryMethod\FactoryMethod.cs" />
+    <Compile Include="FactoryMethod\Vehicle.cs" />
+    <Compile Include="FactoryMethod\Motorcycle.cs" />
+    <Compile Include="FactoryMethod\Car.cs" />
+    <Compile Include="FactoryMethod\VehicleFactory.cs" />
+    <Compile Include="FactoryMethod\Truck.cs" />
+    <Compile Include="FactoryMethod\Saguie.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Singleton\" />
+    <Folder Include="FactoryMethod\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
