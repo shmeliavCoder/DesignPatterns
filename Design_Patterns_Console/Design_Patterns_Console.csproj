@@ -34,7 +34,8 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Class 1\FirstCS.cs" />
+    <Compile Include="Class 1\Singleton.cs" />
+    <Compile Include="Class 1\Clock.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Class 1\" />
