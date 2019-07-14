@@ -1,5 +1,6 @@
 ﻿using System;
 using Design_Patterns_Console.Class1;
+using Design_Patterns_Console.ContextState;
 using Design_Patterns_Console.FactoryMethod;
 using State;
 
@@ -16,7 +17,10 @@ namespace Design_Patterns_Console
             //FactoryQuestion();
 
             //Question three:
-            StateQuestion();
+            //StateQuestion();
+
+            //Question four
+            StateContextQuestion();
         }
 
         public static void SingletonQuestion()
@@ -49,6 +53,23 @@ namespace Design_Patterns_Console
             ctx.pressedOn();
             ctx.pressedOff();
             ctx.pressedOff();
+        }
+
+        public static void StateContextQuestion()
+        {
+            LoginContext ctx = new LoginContext();
+            NewLogin nl = new NewLogin(ctx);
+            ctx.Init(nl);
+
+            ctx.Login("123");
+            ctx.Login("123");
+            ctx.Login("123");
+            ctx.Login("123");
+            ctx.Login("123");
+            ctx.Login("123");
+            ctx.Restart();
+            ctx.Login("123");
+            ctx.Login("12345");
         }
     }
 }

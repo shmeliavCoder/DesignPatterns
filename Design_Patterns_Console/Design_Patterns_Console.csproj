@@ -48,11 +48,19 @@
     <Compile Include="State\IAmOn.cs" />
     <Compile Include="State\ILightState.cs" />
     <Compile Include="State\IAmBroken.cs" />
+    <Compile Include="ContextState\ILoginState.cs" />
+    <Compile Include="ContextState\LoginBase.cs" />
+    <Compile Include="ContextState\NewLogin.cs" />
+    <Compile Include="ContextState\LoginSuccess.cs" />
+    <Compile Include="ContextState\LoginFailed.cs" />
+    <Compile Include="ContextState\Locked.cs" />
+    <Compile Include="ContextState\LoginContext.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Singleton\" />
     <Folder Include="FactoryMethod\" />
     <Folder Include="State\" />
+    <Folder Include="ContextState\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
