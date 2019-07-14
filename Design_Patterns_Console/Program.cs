@@ -1,6 +1,7 @@
 ﻿using System;
 using Design_Patterns_Console.Class1;
 using Design_Patterns_Console.FactoryMethod;
+using State;
 
 namespace Design_Patterns_Console
 {
@@ -12,7 +13,10 @@ namespace Design_Patterns_Console
             //SingletonQuestion();
 
             //Question two:
-            FactoryQuestion();
+            //FactoryQuestion();
+
+            //Question three:
+            StateQuestion();
         }
 
         public static void SingletonQuestion()
@@ -32,7 +36,19 @@ namespace Design_Patterns_Console
 
             Vehicle v3 = vf.GetVehicle("unicycle", (float)1.2, "yellow", 1, "data");
             Console.WriteLine(v3 + "\n");
+        }
 
+        public static void StateQuestion()
+        {
+            Context ctx = new Context(new IAmOn());
+            ctx.pressedOff();
+            ctx.pressedOff();
+            ctx.pressedOn();
+            ctx.pressedOff();
+            ctx.pressedOn();
+            ctx.pressedOn();
+            ctx.pressedOff();
+            ctx.pressedOff();
         }
     }
 }

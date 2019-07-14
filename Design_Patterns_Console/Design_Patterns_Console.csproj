@@ -43,10 +43,16 @@
     <Compile Include="FactoryMethod\VehicleFactory.cs" />
     <Compile Include="FactoryMethod\Truck.cs" />
     <Compile Include="FactoryMethod\Saguie.cs" />
+    <Compile Include="State\Context.cs" />
+    <Compile Include="State\IAmOff.cs" />
+    <Compile Include="State\IAmOn.cs" />
+    <Compile Include="State\ILightState.cs" />
+    <Compile Include="State\IAmBroken.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Singleton\" />
     <Folder Include="FactoryMethod\" />
+    <Folder Include="State\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
