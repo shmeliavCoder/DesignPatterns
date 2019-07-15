@@ -76,6 +76,8 @@
     <Compile Include="Day2\ProtoType\Square.cs" />
     <Compile Include="Day2\ProtoType\ShapeContainer.cs" />
     <Compile Include="Day2\ProtoType\Shape.cs" />
+    <Compile Include="Day2\ProtoType\Web\WebInfo.cs" />
+    <Compile Include="Day2\ProtoType\Web\WebInfoFactory.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Day1\" />
@@ -88,6 +90,7 @@
     <Folder Include="Day2\Chain Of Responsibility\Logs\" />
     <Folder Include="Day2\Composite\" />
     <Folder Include="Day2\ProtoType\" />
+    <Folder Include="Day2\ProtoType\Web\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

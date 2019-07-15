@@ -215,5 +215,10 @@ namespace Design_Patterns_Console
             Console.WriteLine(shapeContainer);
             Console.WriteLine(shapeContainer2);
         }
+
+        public static void PrototypeWeb()
+        {
+
+        }
     }
 }
