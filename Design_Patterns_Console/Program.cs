@@ -6,6 +6,7 @@ using Design_Patterns_Console.Day2.ChainOfResponsibility.Logs;
 using Design_Patterns_Console.FactoryMethod;
 using State;
 using CompositeX;
+using ProtoType;
 
 namespace Design_Patterns_Console
 {
@@ -33,7 +34,10 @@ namespace Design_Patterns_Console
             //ChainOfRepoQuestion();
 
             // Question six:
-            CompositeQuestion();
+            //CompositeQuestion();
+
+            // Question Sever
+            PrototypeQuestion();
         }
 
         public static void SingletonQuestion()
@@ -186,6 +190,30 @@ namespace Design_Patterns_Console
             root.Draw("");
             Console.WriteLine($"ROOT COUNT: {root.CountLeaf()}");
             Console.WriteLine($"isBinary {isBinary(root)}");
+        }
+
+        public static void PrototypeQuestion()
+        {
+
+            Circle c = new Circle(new Point(5, 5), 50.5);
+
+            Square sq = new Square(new Point(1, 1), new Point(4, 4));
+
+            Square sq2 = new Square(new Point(1, 5), new Point(4, 9));
+
+            ShapeContainer shapeContainer = new ShapeContainer();
+
+            shapeContainer.addItem(c);
+            shapeContainer.addItem(sq);
+            shapeContainer.addItem(sq2);
+
+            ShapeContainer shapeContainer2 = shapeContainer.clone();
+
+            sq.BR = new Point(3, 3);
+
+
+            Console.WriteLine(shapeContainer);
+            Console.WriteLine(shapeContainer2);
         }
     }
 }
