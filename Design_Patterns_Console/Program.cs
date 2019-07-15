@@ -144,6 +144,21 @@ namespace Design_Patterns_Console
             chainRootLog2.Log("XD TV", 3);
         }
 
+
+        public static bool isBinary(Component current)
+        {
+            if (current.GetChilds() == null || current.GetChilds().Count == 0)
+            {
+                return true;
+            }
+            if (current.GetChilds().Count == 2)
+            {
+                return isBinary(current.GetChilds()[0]) && isBinary(current.GetChilds()[1]);
+            }
+
+            return false;
+        }
+
         public static void CompositeQuestion()
         {
             Component root = new Composite("Canvas root");
@@ -170,6 +185,7 @@ namespace Design_Patterns_Console
 
             root.Draw("");
             Console.WriteLine($"ROOT COUNT: {root.CountLeaf()}");
+            Console.WriteLine($"isBinary {isBinary(root)}");
         }
     }
 }
