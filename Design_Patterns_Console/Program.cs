@@ -5,6 +5,7 @@ using Design_Patterns_Console.ContextState;
 using Design_Patterns_Console.Day2.ChainOfResponsibility.Logs;
 using Design_Patterns_Console.FactoryMethod;
 using State;
+using CompositeX;
 
 namespace Design_Patterns_Console
 {
@@ -29,7 +30,10 @@ namespace Design_Patterns_Console
             // DAY TWO:
 
             // Question five:
-            ChainOfRepoQuestion();
+            //ChainOfRepoQuestion();
+
+            // Question six:
+            CompositeQuestion();
         }
 
         public static void SingletonQuestion()
@@ -138,6 +142,34 @@ namespace Design_Patterns_Console
             chainRootLog2.Log("Memoization", 4);
             Console.WriteLine("==================");
             chainRootLog2.Log("XD TV", 3);
+        }
+
+        public static void CompositeQuestion()
+        {
+            Component root = new Composite("Canvas root");
+            Component circle1 = new Leaf("Circle 1");
+            Component rectangle = new Leaf("Rectangle x");
+            root.AddChild(circle1);
+            root.AddChild(rectangle);
+
+            Component container1 = new Composite("Container 1");
+            Component circle2 = new Leaf("Circle 1");
+            Component circle3 = new Leaf("Circle 2");
+            container1.AddChild(circle2);
+            container1.AddChild(circle3);
+
+            root.AddChild(container1);
+
+            Component container2 = new Composite("Container of triangles");
+            Component t1 = new Leaf("Triangle 1");
+            Component t2 = new Leaf("Triangle 2");
+            container2.AddChild(t1);
+            container2.AddChild(t2);
+
+            root.AddChild(container2);
+
+            root.Draw("");
+            Console.WriteLine($"ROOT COUNT: {root.CountLeaf()}");
         }
     }
 }

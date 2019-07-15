@@ -67,6 +67,9 @@
     <Compile Include="Day2\Chain Of Responsibility\Logs\FatalLogger.cs" />
     <Compile Include="Day2\Chain Of Responsibility\Logs\InfoLogger.cs" />
     <Compile Include="Day2\Chain Of Responsibility\Logs\DebugLogger.cs" />
+    <Compile Include="Day2\Composite\Component.cs" />
+    <Compile Include="Day2\Composite\Composite.cs" />
+    <Compile Include="Day2\Composite\Leaf.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Day1\" />
@@ -77,6 +80,7 @@
     <Folder Include="Day2\" />
     <Folder Include="Day2\Chain Of Responsibility\" />
     <Folder Include="Day2\Chain Of Responsibility\Logs\" />
+    <Folder Include="Day2\Composite\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
