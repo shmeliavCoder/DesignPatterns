@@ -1,6 +1,8 @@
 ﻿using System;
+using ChainOfResp;
 using Design_Patterns_Console.Class1;
 using Design_Patterns_Console.ContextState;
+using Design_Patterns_Console.Day2.ChainOfResponsibility.Logs;
 using Design_Patterns_Console.FactoryMethod;
 using State;
 
@@ -10,17 +12,24 @@ namespace Design_Patterns_Console
     {
         public static void Main(string[] args)
         {
-            //Question one:
+            // DAY ONE:
+
+            // Question one:
             //SingletonQuestion();
 
-            //Question two:
+            // Question two:
             //FactoryQuestion();
 
-            //Question three:
+            // Question three:
             //StateQuestion();
 
-            //Question four
-            StateContextQuestion();
+            // Question four
+            //StateContextQuestion();
+
+            // DAY TWO:
+
+            // Question five:
+            ChainOfRepoQuestion();
         }
 
         public static void SingletonQuestion()
@@ -70,6 +79,65 @@ namespace Design_Patterns_Console
             ctx.Restart();
             ctx.Login("123");
             ctx.Login("12345");
+        }
+
+        public static void ChainOfRepoQuestion()
+        {
+            BillHandlerBase billHandler500 = new BillHandler500();
+            BillHandlerBase billHandler200 = new BillHandler200();
+            BillHandlerBase billHandler100 = new BillHandle100();
+            BillHandlerBase billHandler25 = new BillHandle25();
+            BillHandlerBase coinHandler5 = new CoinHandler5();
+            BillHandlerBase coinHandler2 = new CoinHandler2();
+
+            BillHandlerBase chainRoot = billHandler500;
+            billHandler500.SetNext(billHandler200);
+            billHandler200.SetNext(billHandler100);
+            billHandler100.SetNext(billHandler25);
+            billHandler25.SetNext(coinHandler5);
+            coinHandler5.SetNext(coinHandler2);
+
+            Console.WriteLine("748:");
+            chainRoot.Handle(748);
+            Console.WriteLine("==================");
+            Console.WriteLine("385:");
+            chainRoot.Handle(385);
+            Console.WriteLine("==================");
+            Console.WriteLine("400:");
+            chainRoot.Handle(400);
+            Console.WriteLine("==================");
+            Console.WriteLine("402:");
+            chainRoot.Handle(402);
+
+            Console.WriteLine("LogsPart ============");
+
+            LogBase fatalLogger = new FatalLogger();
+            LogBase errorLogger = new ErrorLogger();
+            LogBase debugLogger = new DebugLogger();
+            LogBase infoLogger = new InfoLogger();
+
+            LogBase chainRootLog = fatalLogger;
+            fatalLogger.SetNext(errorLogger);
+            errorLogger.SetNext(debugLogger);
+            debugLogger.SetNext(infoLogger);
+
+            chainRootLog.Log("Dude", 1);
+            Console.WriteLine("==================");
+            chainRootLog.Log("Memoization", 4);
+            Console.WriteLine("==================");
+            chainRootLog.Log("XD TV", 3);
+
+            LogBase chainRootLog2 = infoLogger;
+            infoLogger.SetNext(debugLogger);
+            debugLogger.SetNext(errorLogger);
+            errorLogger.SetNext(fatalLogger);
+            fatalLogger.SetNext(null);
+
+            chainRootLog2.Log("Dude", 1);
+            Console.WriteLine("==================");
+            chainRootLog2.Log("Memoization", 4);
+            Console.WriteLine("==================");
+            chainRootLog2.Log("XD TV", 3);
         }
     }
 }
