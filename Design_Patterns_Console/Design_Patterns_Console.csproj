@@ -102,6 +102,13 @@
     <Compile Include="Day3\Adapter\DBData\PerfectStore.cs" />
     <Compile Include="Day3\Adapter\DBData\BadStore.cs" />
     <Compile Include="Day3\Adapter\DBData\BadStoreToPerfectStoreAdapter.cs" />
+    <Compile Include="Day3\TemplateMethod\OracleSelectAllQuery.cs" />
+    <Compile Include="Day3\TemplateMethod\OracleTemplateBase.cs" />
+    <Compile Include="Day3\TemplateMethod\OracleUpdateQuery.cs" />
+    <Compile Include="Day3\TemplateMethod\TemplateQueryRunner.cs" />
+    <Compile Include="Day3\TemplateMethod\MongoDeleteQuery.cs" />
+    <Compile Include="Day3\TemplateMethod\MongoTemplateBase.cs" />
+    <Compile Include="Day3\TemplateMethod\MongoUpdateQuery.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Day1\" />
@@ -120,6 +127,7 @@
     <Folder Include="Day3\Adapter\" />
     <Folder Include="Day3\Adapter\DBData\" />
     <Folder Include="Day3\Memento\" />
+    <Folder Include="Day3\TemplateMethod\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
