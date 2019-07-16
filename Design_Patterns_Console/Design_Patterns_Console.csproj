@@ -88,6 +88,20 @@
     <Compile Include="Day3\Visitor\Perfume.cs" />
     <Compile Include="Day3\Visitor\OneShekelStore.cs" />
     <Compile Include="Day3\Visitor\ShopRent.cs" />
+    <Compile Include="Day3\Adapter\Adapter3Dto2D.cs" />
+    <Compile Include="Day3\Adapter\D2NicePainter.cs" />
+    <Compile Include="Day3\Adapter\D2Shape.cs" />
+    <Compile Include="Day3\Adapter\D3NicePainter.cs" />
+    <Compile Include="Day3\Adapter\D3Shape.cs" />
+    <Compile Include="Day3\Adapter\ID2Painter.cs" />
+    <Compile Include="Day3\Adapter\ID3Painter.cs" />
+    <Compile Include="Day3\Adapter\DBData\WebClientData.cs" />
+    <Compile Include="Day3\Adapter\DBData\ClientData.cs" />
+    <Compile Include="Day3\Adapter\DBData\IDBData.cs" />
+    <Compile Include="Day3\Adapter\DBData\IDBWebData.cs" />
+    <Compile Include="Day3\Adapter\DBData\PerfectStore.cs" />
+    <Compile Include="Day3\Adapter\DBData\BadStore.cs" />
+    <Compile Include="Day3\Adapter\DBData\BadStoreToPerfectStoreAdapter.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Day1\" />
@@ -103,6 +117,8 @@
     <Folder Include="Day2\ProtoType\Web\" />
     <Folder Include="Day3\" />
     <Folder Include="Day3\Visitor\" />
+    <Folder Include="Day3\Adapter\" />
+    <Folder Include="Day3\Adapter\DBData\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

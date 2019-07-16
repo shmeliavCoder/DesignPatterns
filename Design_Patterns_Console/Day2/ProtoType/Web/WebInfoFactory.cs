@@ -11,6 +11,11 @@ namespace Design_Patterns_Console.Day2.ProtoType.Web
     {
         Dictionary<string, WebInfo> webInfoDict;
 
+        public WebInfoFactory()
+        {
+            this.webInfoDict = new Dictionary<string, WebInfo>();
+        }
+
         public WebInfo CreateWebInfo(string url)
         {
             WebInfo temp = null;

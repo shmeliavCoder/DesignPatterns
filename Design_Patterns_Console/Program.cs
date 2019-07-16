@@ -8,6 +8,7 @@ using State;
 using CompositeX;
 using ProtoType;
 using Visitor;
+using Design_Patterns_Console.Day3.Adapter.DBData;
 
 namespace Design_Patterns_Console
 {
@@ -41,7 +42,10 @@ namespace Design_Patterns_Console
             //PrototypeQuestion();
 
             // Question eight
-            VisitorQuestion();
+            //VisitorQuestion();
+
+            //Question Nine
+            AdapterQuestion();
         }
 
         public static void SingletonQuestion()
@@ -244,6 +248,25 @@ namespace Design_Patterns_Console
             Console.WriteLine($"Price at oneshekelstore = {shop.Accept(oneShekelStore)}");
 
             Console.WriteLine($"Price after tax = {shop.Accept(endOfYearVisitor)}");
+        }
+
+        public static void AdapterQuestion()
+        {
+            WebClientData webcd = new WebClientData("name", 1, "1.0.1.0", true);
+
+            draw(new BadStoreToPerfectStoreAdapter(), webcd);
+
+            Console.WriteLine("\n====================");
+            Console.WriteLine("Print before the adapter");
+            Console.WriteLine("\n====================\n");
+
+            draw(new BadStore(), webcd);
+        }
+
+        // non mutable
+        private static void draw(IDBWebData dbwebdata, WebClientData webcd)
+        {
+            dbwebdata.Store(webcd);
         }
     }
 }
