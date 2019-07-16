@@ -7,6 +7,7 @@ using Design_Patterns_Console.FactoryMethod;
 using State;
 using CompositeX;
 using ProtoType;
+using Visitor;
 
 namespace Design_Patterns_Console
 {
@@ -37,7 +38,10 @@ namespace Design_Patterns_Console
             //CompositeQuestion();
 
             // Question Sever
-            PrototypeQuestion();
+            //PrototypeQuestion();
+
+            // Question eight
+            VisitorQuestion();
         }
 
         public static void SingletonQuestion()
@@ -219,6 +223,27 @@ namespace Design_Patterns_Console
         public static void PrototypeWeb()
         {
 
+        }
+
+        public static void VisitorQuestion()
+        {
+            Liquor vodka = new Liquor(95);
+
+            Console.WriteLine(vodka);
+
+            IVisitor endOfYearVisitor = new EndOfYearTax();
+
+            Console.WriteLine($"Price after tax = {vodka.Accept(endOfYearVisitor)}");
+
+            ShopRent shop = new ShopRent();
+
+            Console.WriteLine(shop);
+
+            IVisitor oneShekelStore = new OneShekelStore();
+
+            Console.WriteLine($"Price at oneshekelstore = {shop.Accept(oneShekelStore)}");
+
+            Console.WriteLine($"Price after tax = {shop.Accept(endOfYearVisitor)}");
         }
     }
 }

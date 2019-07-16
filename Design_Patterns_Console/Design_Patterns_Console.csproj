@@ -78,6 +78,16 @@
     <Compile Include="Day2\ProtoType\Shape.cs" />
     <Compile Include="Day2\ProtoType\Web\WebInfo.cs" />
     <Compile Include="Day2\ProtoType\Web\WebInfoFactory.cs" />
+    <Compile Include="Day3\Visitor\Chocolate.cs" />
+    <Compile Include="Day3\Visitor\EndOfYearTax.cs" />
+    <Compile Include="Day3\Visitor\IVisitable.cs" />
+    <Compile Include="Day3\Visitor\IVisitor.cs" />
+    <Compile Include="Day3\Visitor\Liquor.cs" />
+    <Compile Include="Day3\Visitor\ProductBase.cs" />
+    <Compile Include="Day3\Visitor\Tabacco.cs" />
+    <Compile Include="Day3\Visitor\Perfume.cs" />
+    <Compile Include="Day3\Visitor\OneShekelStore.cs" />
+    <Compile Include="Day3\Visitor\ShopRent.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Day1\" />
@@ -91,6 +101,8 @@
     <Folder Include="Day2\Composite\" />
     <Folder Include="Day2\ProtoType\" />
     <Folder Include="Day2\ProtoType\Web\" />
+    <Folder Include="Day3\" />
+    <Folder Include="Day3\Visitor\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
