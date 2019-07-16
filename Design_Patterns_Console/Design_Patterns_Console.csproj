@@ -119,6 +119,7 @@
     <Folder Include="Day3\Visitor\" />
     <Folder Include="Day3\Adapter\" />
     <Folder Include="Day3\Adapter\DBData\" />
+    <Folder Include="Day3\Memento\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
