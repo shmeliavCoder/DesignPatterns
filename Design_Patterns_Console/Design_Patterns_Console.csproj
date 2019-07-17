@@ -131,6 +131,16 @@
     <Compile Include="Day4\Builder\MeatHamburgerBuilder.cs" />
     <Compile Include="Day4\Builder\MeatHamburgerLettuce.cs" />
     <Compile Include="Day4\Builder\HamburgerFactoryMethod.cs" />
+    <Compile Include="Day4\FacadeAndProxy\FlightDAO.cs" />
+    <Compile Include="Day4\FacadeAndProxy\ICustomer.cs" />
+    <Compile Include="Day4\FacadeAndProxy\ICompany.cs" />
+    <Compile Include="Day4\FacadeAndProxy\IAdmin.cs" />
+    <Compile Include="Day4\FacadeAndProxy\FlightSystemFacade.cs" />
+    <Compile Include="Day4\FacadeAndProxy\ProxyFacade.cs" />
+    <Compile Include="Day4\FacadeAndProxy\ClientProxy.cs" />
+    <Compile Include="Day4\FacadeAndProxy\CustomerProxy.cs" />
+    <Compile Include="Day4\FacadeAndProxy\CompanyProxy.cs" />
+    <Compile Include="Day4\FacadeAndProxy\AdminProxy.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Day1\" />
@@ -154,6 +164,7 @@
     <Folder Include="Day4\Decorator\" />
     <Folder Include="Day4\Decorator\Calculator\" />
     <Folder Include="Day4\Builder\" />
+    <Folder Include="Day4\FacadeAndProxy\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
