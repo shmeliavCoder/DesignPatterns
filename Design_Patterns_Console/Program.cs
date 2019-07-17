@@ -9,6 +9,8 @@ using CompositeX;
 using ProtoType;
 using Visitor;
 using Design_Patterns_Console.Day3.Adapter.DBData;
+using Design_Patterns_Console.Day4.Decorator;
+using Design_Patterns_Console.Day4.Decorator.Calculator;
 
 namespace Design_Patterns_Console
 {
@@ -38,14 +40,19 @@ namespace Design_Patterns_Console
             // Question six:
             //CompositeQuestion();
 
-            // Question Sever
+            // Question Seven
             //PrototypeQuestion();
+
+            // DAY THREE:
 
             // Question eight
             //VisitorQuestion();
 
-            //Question Nine
-            AdapterQuestion();
+            // Question Nine
+            //AdapterQuestion();
+
+            // Question ten
+            DecoratorCalcQuestion();
         }
 
         public static void SingletonQuestion()
@@ -267,6 +274,20 @@ namespace Design_Patterns_Console
         private static void draw(IDBWebData dbwebdata, WebClientData webcd)
         {
             dbwebdata.Store(webcd);
+        }
+
+        public static void DecoratorCalcQuestion()
+        {
+            IFormula formula = new StartNumber(5);
+            formula = new MethodMulDecorator(formula, 2);
+            formula = new MethodAddDecorator(formula, 100);
+            formula = new MethodDivDecorator(formula, 12);
+            formula = new MethodSubDecorator(formula, 3);
+            formula = new MethodMulDecorator(formula, 4);
+            formula = new MethodAddDecorator(formula, 7);
+
+            Console.WriteLine($"{formula.GetFormula()} Result: {formula.GetResult()}");
+
         }
     }
 }

@@ -109,6 +109,28 @@
     <Compile Include="Day3\TemplateMethod\MongoDeleteQuery.cs" />
     <Compile Include="Day3\TemplateMethod\MongoTemplateBase.cs" />
     <Compile Include="Day3\TemplateMethod\MongoUpdateQuery.cs" />
+    <Compile Include="Day4\Decorator\BasePizza.cs" />
+    <Compile Include="Day4\Decorator\CheeseTopping.cs" />
+    <Compile Include="Day4\Decorator\IPizza.cs" />
+    <Compile Include="Day4\Decorator\PineaappleTopping.cs" />
+    <Compile Include="Day4\Decorator\TomatoTopping.cs" />
+    <Compile Include="Day4\Decorator\ToppingDecoratorBase.cs" />
+    <Compile Include="Day4\Decorator\HalfPriceDecorator.cs" />
+    <Compile Include="Day4\Decorator\Calculator\IFormula.cs" />
+    <Compile Include="Day4\Decorator\Calculator\StartNumber.cs" />
+    <Compile Include="Day4\Decorator\Calculator\MethodDecoratorBase.cs" />
+    <Compile Include="Day4\Decorator\Calculator\MethodAddDecorator.cs" />
+    <Compile Include="Day4\Decorator\Calculator\MethodSubDecorator.cs" />
+    <Compile Include="Day4\Decorator\Calculator\MethodMulDecorator.cs" />
+    <Compile Include="Day4\Decorator\Calculator\MethodDivDecorator.cs" />
+    <Compile Include="Day4\Builder\Hamburger.cs" />
+    <Compile Include="Day4\Builder\HamburgerBuilder.cs" />
+    <Compile Include="Day4\Builder\HamburgerNotReadyException.cs" />
+    <Compile Include="Day4\Builder\VeggHambBuilderLettuce.cs" />
+    <Compile Include="Day4\Builder\VeggHamburgerBuilder.cs" />
+    <Compile Include="Day4\Builder\MeatHamburgerBuilder.cs" />
+    <Compile Include="Day4\Builder\MeatHamburgerLettuce.cs" />
+    <Compile Include="Day4\Builder\HamburgerFactoryMethod.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Day1\" />
@@ -128,6 +150,10 @@
     <Folder Include="Day3\Adapter\DBData\" />
     <Folder Include="Day3\Memento\" />
     <Folder Include="Day3\TemplateMethod\" />
+    <Folder Include="Day4\" />
+    <Folder Include="Day4\Decorator\" />
+    <Folder Include="Day4\Decorator\Calculator\" />
+    <Folder Include="Day4\Builder\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
