@@ -11,6 +11,7 @@ using Visitor;
 using Design_Patterns_Console.Day3.Adapter.DBData;
 using Design_Patterns_Console.Day4.Decorator;
 using Design_Patterns_Console.Day4.Decorator.Calculator;
+using Design_Patterns_Console.Day4.Bridge;
 
 namespace Design_Patterns_Console
 {
@@ -288,6 +289,27 @@ namespace Design_Patterns_Console
 
             Console.WriteLine($"{formula.GetFormula()} Result: {formula.GetResult()}");
 
+        }
+
+        public static void BridgeQuestion()
+        {
+            TV xd = new TV(99, true);
+            Memir mem = new Memir(70, true);
+            RemoteControl rmctl = new RemoteControl(xd);
+            rmctl.next();
+            rmctl.next();
+            rmctl.next();
+            rmctl.next();
+            rmctl.next();
+            rmctl.Off();
+            
+            rmctl = new RemoteControl(mem);
+            rmctl.next();
+            rmctl.next();
+            rmctl.next();
+            rmctl.next();
+            rmctl.next();
+            rmctl.Off();
         }
     }
 }

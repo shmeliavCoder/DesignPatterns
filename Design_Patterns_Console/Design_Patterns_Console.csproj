@@ -141,6 +141,10 @@
     <Compile Include="Day4\FacadeAndProxy\CustomerProxy.cs" />
     <Compile Include="Day4\FacadeAndProxy\CompanyProxy.cs" />
     <Compile Include="Day4\FacadeAndProxy\AdminProxy.cs" />
+    <Compile Include="Day4\Bridge\EntertainmentDevice.cs" />
+    <Compile Include="Day4\Bridge\TV.cs" />
+    <Compile Include="Day4\Bridge\Memir.cs" />
+    <Compile Include="Day4\Bridge\RemoteControl.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Day1\" />
@@ -165,6 +169,7 @@
     <Folder Include="Day4\Decorator\Calculator\" />
     <Folder Include="Day4\Builder\" />
     <Folder Include="Day4\FacadeAndProxy\" />
+    <Folder Include="Day4\Bridge\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
