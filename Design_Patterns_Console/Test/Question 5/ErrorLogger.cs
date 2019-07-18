@@ -1,0 +1,18 @@
+﻿using System;
+namespace Design_Patterns_Console.Test.Question5
+{
+    public class ErrorLogger : LogBase
+    {
+        public override void Log(string message, int level)
+        {
+            if(level >= 2)
+            {
+                Console.WriteLine($"Writing error to file: {message}");
+            }
+            if (next != null)
+            {
+                next.Log(message, level);
+            }
+        }
+    }
+}

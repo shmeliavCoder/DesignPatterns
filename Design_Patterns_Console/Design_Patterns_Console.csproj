@@ -149,6 +149,29 @@
     <Compile Include="Day 5\Strategy\QuickSort.cs" />
     <Compile Include="Day 5\Strategy\MergeSort.cs" />
     <Compile Include="Day 5\Strategy\NumberCollection.cs" />
+    <Compile Include="Test\Question1\SpaceShipContext.cs" />
+    <Compile Include="Test\Question1\ISpaceShipState.cs" />
+    <Compile Include="Test\Question1\NewShip.cs" />
+    <Compile Include="Test\Question1\WonGameState.cs" />
+    <Compile Include="Test\Question1\DangerGameState.cs" />
+    <Compile Include="Test\Question1\LostGameState.cs" />
+    <Compile Include="Test\Question 2\TreeComponent.cs" />
+    <Compile Include="Test\Question 2\TreeComposite.cs" />
+    <Compile Include="Test\Question 2\TreeLeaf.cs" />
+    <Compile Include="Test\Question 2\StaticFunction.cs" />
+    <Compile Include="Test\Question 3\CarProxy.cs" />
+    <Compile Include="Test\Question 3\ICar.cs" />
+    <Compile Include="Test\Question 3\Car.cs" />
+    <Compile Include="Test\Question 3\IGasAndLocation.cs" />
+    <Compile Include="Test\Question 5\ErrorLogger.cs" />
+    <Compile Include="Test\Question 5\FatalLogger.cs" />
+    <Compile Include="Test\Question 5\InfoLogger.cs" />
+    <Compile Include="Test\Question 5\LogBase.cs" />
+    <Compile Include="Test\Question 8\TemplateGymTraining.cs" />
+    <Compile Include="Test\Question 8\GymExcerciseBase.cs" />
+    <Compile Include="Test\Question 8\PowerLifting.cs" />
+    <Compile Include="Test\Question 8\Jogging.cs" />
+    <Compile Include="Test\ToughtQuestion2\WordListCounter.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Day1\" />
@@ -177,6 +200,13 @@
     <Folder Include="Day4\FlyWeight\" />
     <Folder Include="Day 5\" />
     <Folder Include="Day 5\Strategy\" />
+    <Folder Include="Test\" />
+    <Folder Include="Test\Question1\" />
+    <Folder Include="Test\Question 2\" />
+    <Folder Include="Test\Question 3\" />
+    <Folder Include="Test\Question 5\" />
+    <Folder Include="Test\Question 8\" />
+    <Folder Include="Test\ToughtQuestion2\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

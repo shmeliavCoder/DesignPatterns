@@ -14,6 +14,8 @@ using Design_Patterns_Console.Day4.Decorator.Calculator;
 using Design_Patterns_Console.Day4.Bridge;
 using System.Collections.Generic;
 using Design_Patterns_Console.Day5.Strategy;
+using Design_Patterns_Console.Test.Question2;
+using Design_Patterns_Console.Test.ToughtQuestion2;
 
 namespace Design_Patterns_Console
 {
@@ -58,7 +60,12 @@ namespace Design_Patterns_Console
             //DecoratorCalcQuestion();
 
             // Question Eleven
-            StrategyQuestion();
+            // StrategyQuestion();
+
+            // TEST:
+            ///StaticFunction.CheckEven();
+            ///
+            WordListCounter.testCountWords();
         }
 
         public static void SingletonQuestion()
