@@ -12,6 +12,8 @@ using Design_Patterns_Console.Day3.Adapter.DBData;
 using Design_Patterns_Console.Day4.Decorator;
 using Design_Patterns_Console.Day4.Decorator.Calculator;
 using Design_Patterns_Console.Day4.Bridge;
+using System.Collections.Generic;
+using Design_Patterns_Console.Day5.Strategy;
 
 namespace Design_Patterns_Console
 {
@@ -53,7 +55,10 @@ namespace Design_Patterns_Console
             //AdapterQuestion();
 
             // Question ten
-            DecoratorCalcQuestion();
+            //DecoratorCalcQuestion();
+
+            // Question Eleven
+            StrategyQuestion();
         }
 
         public static void SingletonQuestion()
@@ -310,6 +315,21 @@ namespace Design_Patterns_Console
             rmctl.next();
             rmctl.next();
             rmctl.Off();
+        }
+
+        public static void StrategyQuestion()
+        {
+            NumberCollection lst = new NumberCollection();
+            for (int i = 0; i < 1000; i++)
+            {
+                lst.Add(i);
+            }
+
+            lst.Sort();
+            lst.remove(50);
+            lst.Sort();
+            lst.Add(50);
+            lst.Sort();
         }
     }
 }

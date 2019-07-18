@@ -145,6 +145,10 @@
     <Compile Include="Day4\Bridge\TV.cs" />
     <Compile Include="Day4\Bridge\Memir.cs" />
     <Compile Include="Day4\Bridge\RemoteControl.cs" />
+    <Compile Include="Day 5\Strategy\ISort.cs" />
+    <Compile Include="Day 5\Strategy\QuickSort.cs" />
+    <Compile Include="Day 5\Strategy\MergeSort.cs" />
+    <Compile Include="Day 5\Strategy\NumberCollection.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Day1\" />
@@ -170,6 +174,9 @@
     <Folder Include="Day4\Builder\" />
     <Folder Include="Day4\FacadeAndProxy\" />
     <Folder Include="Day4\Bridge\" />
+    <Folder Include="Day4\FlyWeight\" />
+    <Folder Include="Day 5\" />
+    <Folder Include="Day 5\Strategy\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
