@@ -179,6 +179,11 @@
     <Compile Include="Test\Question 10\DecoratorSeeThrought.cs" />
     <Compile Include="Test\Question 10\DecoratorShadow.cs" />
     <Compile Include="Test\Question 10\DecoratorLight.cs" />
+    <Compile Include="Test\Question 12\PC.cs" />
+    <Compile Include="Test\Question 12\PCBuilder.cs" />
+    <Compile Include="Test\Question 12\LivingRoomPCBuilder.cs" />
+    <Compile Include="Test\Question 12\OfficePCBuilder.cs" />
+    <Compile Include="Test\Question 12\GamingPCBuilder.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Day1\" />
@@ -215,6 +220,7 @@
     <Folder Include="Test\Question 8\" />
     <Folder Include="Test\ToughtQuestion2\" />
     <Folder Include="Test\Question 10\" />
+    <Folder Include="Test\Question 12\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
